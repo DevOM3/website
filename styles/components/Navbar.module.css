@@ -1,0 +1,129 @@
+.navbar,
+.navbarLogo > span,
+.menuButton,
+.mobileNavbarTop {
+  transition: all 444ms ease-out;
+}
+
+.navbar {
+  height: 71px;
+  background: rgba(251, 251, 251, 0.4);
+  backdrop-filter: blur(11px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 21px;
+  padding-right: 21px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.navbarLogo,
+.navbarLogo > span {
+  display: inline-block;
+  font-size: xx-large;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.navbarLogo > span:hover {
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.navbarLinks {
+  display: flex;
+  transition: all 444ms ease-in-out;
+}
+
+.navbarLinks > ul {
+  display: flex;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transition: all 444ms ease-in-out;
+}
+
+.links {
+  list-style: none;
+  margin-left: 11px;
+  margin-right: 11px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 251ms ease-in-out;
+  opacity: 0.8;
+}
+
+.links:hover {
+  box-shadow: 0px 2.1px 4px 0.1px gray;
+  opacity: 1;
+  transform: translateY(-2px);
+  background: rgba(251, 251, 251, 0.4);
+}
+.linksDark:hover {
+  box-shadow: 0px 2.1px 4px 0.1px #555555;
+  opacity: 1;
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.menuButton {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .mobileNavbarTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .menuButton {
+    display: flex !important;
+  }
+  .navbarLinks {
+    flex-direction: column;
+    transition: all 444ms ease-in-out;
+  }
+  .navbarLinks > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    transition: all 444ms ease-in-out;
+  }
+  .links {
+    width: 171px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    text-align: center;
+    opacity: 1;
+  }
+  .links {
+    background: rgba(251, 251, 251, 0.7);
+  }
+  .linksDark {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .links:hover,
+  .linksDark:hover {
+    box-shadow: unset;
+    opacity: 1;
+    transform: unset;
+    background: rgba(251, 251, 251, 0.7);
+  }
+  .linksDark:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}

@@ -14,3 +14,40 @@ a {
 * {
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.certificateVisible {
+  overflow: hidden;
+}
+
+.youTubeVideo {
+  object-fit: contain;
+  margin: 11px;
+  height: 271px;
+  width: 481px;
+  padding: 4px;
+  border-radius: 11px;
+  transition: all 444ms;
+}
+
+.youTubeVideo:hover {
+  transform: scale(1.01);
+}
+
+@media only screen and (max-width: 1000px) {
+  .youTubeVideo {
+    object-fit: contain;
+    margin: 11px;
+    height: 154px;
+    width: 275px;
+    padding: 4px;
+    border-radius: 11px;
+    transition: all 444ms;
+  }
+  .youTubeVideo:hover {
+    transform: scale(1);
+  }
+}

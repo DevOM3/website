@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+.container {
+  min-height: 100vh;
+  transition: all 444ms ease-out;
+}
+
+.textSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #111;
+  transition: all 444ms ease-out;
+}
+
+.text {
+  position: relative;
+  transform: skewY(345deg) translateY(-200px);
+  animation: animateColor 5s linear infinite;
+}
+
+@keyframes animateColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.text .h2 {
+  font-family: "Poppins";
+  position: relative;
+  width: 100%;
+  font-size: 8em;
+  color: black;
+  pointer-events: none;
+  line-height: 0.4em;
+  white-space: nowrap;
+  text-shadow: calc(var(--x)) 100px 0 rgba(0, 0, 0, 0.2);
+  transform: translateX(calc(0% - var(--x) * var(--i)));
+}
+.text .h2dark {
+  font-family: "Poppins";
+  position: relative;
+  width: 100%;
+  font-size: 8em;
+  color: white;
+  pointer-events: none;
+  line-height: 0.4em;
+  white-space: nowrap;
+  text-shadow: calc(var(--x)) 100px 0 rgba(255, 255, 255, 0.1);
+  transform: translateX(calc(0% - var(--x) * var(--i)));
+}
+
+.text h2 span {
+  color: #0f0;
+  margin: 0 10px;
+}
+
+.text .h2 span:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+}
+.text .h2dark span:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+.quickLinks {
+  position: relative;
+  padding-top: 21px;
+  padding-right: 121px;
+  padding-left: 121px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .quickLinks {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.lightColor {
+  position: absolute;
+  filter: blur(150px);
+  transition: all 444ms ease-out;
+}
+
+.lightColor:nth-child(1) {
+  top: 0px;
+  width: 700px;
+  height: 400px;
+  background: #ff359b;
+  transition: all 444ms ease-out;
+  animation: pink-animation 21s infinite linear;
+}
+.lightColor:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background: #fffd87;
+  transition: all 444ms ease-out;
+  animation: yellow-animation 21s infinite linear;
+}
+.lightColor:nth-child(3) {
+  bottom: 50px;
+  right: 100px;
+  width: 500px;
+  height: 500px;
+  background: #00d2ff;
+  transition: all 444ms ease-out;
+  animation: blue-animation 21s infinite linear;
+}
+
+.flyingTextContainer {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #130e23;
+  transition: all 444ms ease-out;
+}
+
+.flyingTextContainer .flyingText {
+  position: relative;
+  text-align: center;
+  margin: 40px;
+  max-width: 650px;
+}
+
+.flyingTextContainer .flyingText span {
+  position: relative;
+  display: inline-block;
+}
+
+.circlePlayground {
+  padding-top: 121px;
+  padding-bottom: 121px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #111111;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  animation: changeColor 5s linear infinite;
+  transition: all 444ms ease-out;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.circlePlayground span {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.circlePlayground span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00ff0a;
+  transform: scale(0.1);
+  box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a,
+    0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 2s;
+}
+
+.circlePlayground span:hover::before {
+  transform: scale(1);
+  transition: 0s;
+}
+
+@media only screen and (max-width: 1000px) {
+  .circlePlayground {
+    display: none;
+  }
+}

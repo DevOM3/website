@@ -1,0 +1,114 @@
+.mobileApps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+}
+
+.appDiv {
+  /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+  background: white;
+  border-radius: 21px;
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  padding: 17px;
+  overflow: hidden;
+  transition: all 444ms ease-out;
+  border: 2px solid gray;
+  box-shadow: 0px 0px 4px 1px gray;
+}
+.appDivDark {
+  /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+  background: black;
+  border-radius: 21px;
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 11px;
+  margin-bottom: 11px;
+  padding: 17px;
+  overflow: hidden;
+  transition: all 444ms ease-out;
+  border: 2px solid gray;
+  box-shadow: 0px 0px 4px 1px gray;
+}
+
+.appImage {
+  border-radius: 21px;
+  margin-bottom: 11px;
+  transition: all 444ms ease-out;
+}
+
+.appTitle {
+  transform: translateY(100vh);
+  font-weight: 600;
+  text-align: center;
+  font-size: 16px;
+  transition: all 444ms ease-in-out;
+}
+
+.appDiv:hover {
+  transform: scale(1.04);
+  border-color: black;
+  box-shadow: 0px 0px 7px 4px gray;
+}
+.appDivDark:hover {
+  transform: scale(1.04);
+  border-color: white;
+  box-shadow: 0px 0px 7px 4px gray;
+}
+.appDiv:hover .appImage,
+.appDivDark:hover .appImage {
+  transform: scale(0.97) rotateZ(-11deg);
+}
+.appDiv:hover .appTitle,
+.appDivDark:hover .appTitle {
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 1024px) {
+  .appDiv {
+    border-color: black;
+    box-shadow: none;
+  }
+  .appDivDark {
+    border-color: white;
+    box-shadow: none;
+  }
+  .appTitle {
+    transform: translateY(0);
+  }
+  .appDiv:hover {
+    transform: scale(1);
+    border-color: black;
+    box-shadow: none;
+  }
+  .appDivDark:hover {
+    transform: scale(1);
+    border-color: white;
+    box-shadow: none;
+  }
+  .appDiv:hover .appImage,
+  .appDivDark:hover .appImage {
+    transform: scale(1) rotateZ(0deg);
+  }
+}

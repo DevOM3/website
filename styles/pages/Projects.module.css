@@ -1,0 +1,196 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  transition: all 444ms ease-out;
+}
+
+.websiteDiv {
+  border-radius: 21px;
+  position: relative;
+  margin: 0 auto;
+  width: 90vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 600px;
+  min-height: 333px;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  overflow: hidden;
+  transition: all 444ms ease-out;
+}
+.websiteDivDark {
+  border-radius: 21px;
+  position: relative;
+  margin: 0 auto;
+  width: 90vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 600px;
+  min-height: 333px;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  overflow: hidden;
+  transition: all 444ms ease-out;
+}
+
+.websiteDiv:hover,
+.websiteDivDark:hover {
+  cursor: pointer;
+  backdrop-filter: blur(0px);
+  overflow: hidden;
+}
+
+.websiteDiv:hover .websiteTitle,
+.websiteDivDark:hover .websiteTitle {
+  opacity: 0;
+  /* transform: scale(0); */
+}
+/* .websiteDiv:hover .visitButtonContainer {
+  top: 85vh;
+} */
+
+.website {
+  border-radius: 21px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 4px solid black;
+  transition: all 444ms ease-out;
+}
+.websiteDark {
+  border-radius: 21px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 4px solid white;
+  transition: all 444ms ease-out;
+}
+
+.websiteTitle {
+  word-wrap: break-word;
+  display: block;
+  white-space: normal;
+  padding: 0;
+  z-index: 0;
+  position: absolute;
+  width: 90vw;
+  height: 100vh;
+  max-width: 1000px;
+  max-height: 600px;
+  border-radius: 21px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bolder;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(21px);
+  transition: all 444ms ease-out;
+}
+
+.websiteImage {
+  display: none;
+}
+
+/* 
+.visitButtonContainer {
+  position: absolute;
+  top: 100vh;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 15vh;
+  display: grid;
+  place-items: center;
+  transition: all 444ms ease-in-out;
+}
+.visitButtonContainer:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.visitButton {
+  background: lawngreen;
+  font-size: 21px;
+  font-weight: 700;
+  padding-right: 71px;
+  padding-left: 71px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 21px;
+  color: #222;
+  transition: all 444ms ease-in-out;
+}
+.visitButton:hover {
+  box-shadow: 0px 0px 5px lawngreen, 0px 0px 10px lawngreen;
+} */
+
+@media (max-width: 700px) {
+  .websiteDiv,
+  .websiteDivDark,
+  .websiteTitle {
+    width: 85vw;
+  }
+}
+@media (max-width: 500px) {
+  .websiteDiv,
+  .websiteDivDark,
+  .websiteTitle {
+    width: 95vw;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .websiteDiv,
+  .websiteDivDark {
+    min-height: unset;
+    height: fit-content;
+    box-shadow: 0px 0px 11px gray;
+    border-radius: 7px;
+  }
+
+  .website,
+  .websiteDark {
+    display: none;
+    height: fit-content;
+  }
+
+  .websiteImage {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  .websiteTitle {
+    position: relative;
+    height: fit-content;
+    font-size: large;
+    border-radius: 0px;
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    /* border-bottom: 1px solid black; */
+  }
+
+  .websiteDiv:hover,
+  .websiteDivDark:hover {
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .websiteDiv:hover .websiteTitle,
+  .websiteDivDark:hover .websiteTitle {
+    opacity: 1;
+    /* transform: scale(0); */
+  }
+}

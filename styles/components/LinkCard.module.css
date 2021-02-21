@@ -1,0 +1,57 @@
+.linkCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 238px;
+  text-align: center;
+  padding: 11px;
+  height: 333px;
+  border-radius: 11px;
+  margin: 21px;
+  backdrop-filter: blur(11px);
+  transition: all 444ms ease-out;
+  box-shadow: 2px 2px 7px gray;
+  overflow: hidden;
+  border-top: 4px solid rgba(255, 255, 255, 0.7);
+  border-left: 4px solid rgba(255, 255, 255, 0.7);
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.linkCard h2,
+.linkCard p {
+  transition: all 444ms ease-out;
+}
+
+.linkCard:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  box-shadow: 4px 4px 11px gray;
+}
+
+.slider {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: skew(45deg) translateX(444px);
+  transition: 444ms;
+}
+
+.linkCard:hover .slider {
+  transform: skew(45deg) translateX(-444px);
+}
+
+@media (max-width: 1000px) {
+  .slider {
+    display: none;
+  }
+  .linkCard:hover {
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 4px 4px 7px gray;
+  }
+}

@@ -1,0 +1,120 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  z-index: 2;
+}
+
+.footer,
+.footer > span {
+  transition: all 444ms ease-out;
+}
+
+.footer > span {
+  margin-bottom: 11px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 11px;
+}
+
+.socialIconButton {
+  transition: all 271ms ease-in-out !important;
+  margin: 2px !important;
+}
+.socialIconButton:hover {
+  transform: scale(1.11) translateY(-2px);
+}
+
+.socialIcon {
+  color: gray !important;
+}
+
+.facebookIcon,
+.facebookIconButton,
+.instagramIcon,
+.instagramIconButton,
+.linkedInIcon,
+.linkedInIconButton,
+.gitHubIcon,
+.gitHubIconButton,
+.gitHubIconButtonDark,
+.twitterIcon,
+.twitterIconButton,
+.youTubeIcon,
+.youTubeIconButton {
+  transition: all 271ms ease-in-out !important;
+}
+
+.facebookIconButton:hover .facebookIcon {
+  color: #3b5998 !important;
+}
+
+.instagramIconButton:hover .instagramIcon {
+  color: #e4405f !important;
+}
+
+.linkedInIconButton:hover .linkedInIcon {
+  color: #04669a !important;
+}
+
+.gitHubIconButton:hover .gitHubIcon {
+  color: #040204 !important;
+}
+
+.gitHubIconButtonDark:hover .gitHubIcon {
+  color: whitesmoke !important;
+}
+
+.twitterIconButton:hover .twitterIcon {
+  color: #00b6f1 !important;
+}
+
+.youTubeIconButton:hover .youTubeIcon {
+  color: #c31a1e !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .socialIconButton:hover {
+    transform: scale(1) translateY(0px);
+  }
+
+  .facebookIcon,
+  .instagramIcon,
+  .linkedInIcon,
+  .gitHubIcon,
+  .twitterIcon,
+  .youTubeIcon {
+    transition: all 271ms ease-in-out !important;
+  }
+
+  .facebookIcon {
+    color: #3b5998 !important;
+  }
+
+  .instagramIcon {
+    color: #e4405f !important;
+  }
+
+  .linkedInIcon {
+    color: #04669a !important;
+  }
+  .gitHubIcon {
+    color: gray !important;
+  }
+
+  .twitterIcon {
+    color: #00b6f1 !important;
+  }
+
+  .youTubeIcon {
+    color: #c31a1e !important;
+  }
+}
